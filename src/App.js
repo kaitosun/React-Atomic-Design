@@ -4,13 +4,24 @@ import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
 import "./styles.css";
 
+const user = {
+  name: "じゃけぇ",
+  image: "https://source.unsplash.com/G8cB8hY3yvU",
+  email: "12345@example.com",
+  phone: "090-1111-2222",
+  company: {
+    name: "テスト株式会社"
+  },
+  website: "http://google.com"
+};
+
 export default function App() {
   return (
     <div className="App">
       <PrimaryButton>テスト</PrimaryButton>
       <SecondaryButton>検索</SecondaryButton>
       <SearchInput />
-      <UserCard />
+      <UserCard user={user} />
     </div>
   );
 }
