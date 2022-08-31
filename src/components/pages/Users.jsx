@@ -1,4 +1,6 @@
+import React from "react";
 import styled from "styled-components";
+
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
 
@@ -22,8 +24,8 @@ export const Users = () => {
       <h2>ユーザーの一覧です</h2>
       <SearchInput />
       <SUserArea>
-        {users.map((user) => (
-          <UserCard key={user.id} user={user} />
+        {users.map((obj) => (
+          <UserCard key={obj.id} user={obj} />
         ))}
       </SUserArea>
     </SContainer>
